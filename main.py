@@ -6,7 +6,7 @@ if __name__ == "__main__":
     
     #data ingestion
     ingestion = DataIngestion()
-    train_path, test_path = ingestion.inititate_data_ingestion
+    train_path, test_path = ingestion.inititate_data_ingestion()
 
     #data transformation
     transformation = DataTransformation()

@@ -1,6 +1,7 @@
 from src.components.data_ingestion import DataIngestion
 from src.components.data_transformation import DataTransformation
 from src.components.model_trainer import Model_trainer
+from src.pipelines.training_pipeline import training_pipeline
 
 if __name__ == "__main__":
     
@@ -15,5 +16,8 @@ if __name__ == "__main__":
     #model training
     model_trainer = Model_trainer()
     accuracy = model_trainer.initiate_model_trainer(X_train,X_test,y_train,y_test)
+
+    pipeline = training_pipeline()
+    accuracy = pipeline.start_training()
 
     print("FInal Model accuracy:", accuracy)

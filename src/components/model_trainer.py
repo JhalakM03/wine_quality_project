@@ -40,7 +40,7 @@ class Model_trainer:
         
         return report
 
-    def initiate_model_trainer(self, X_train, y_train, X_test, y_test):
+    def initiate_model_trainer(self, X_train, X_test, y_train, y_test):
 
         try:
 
@@ -53,7 +53,7 @@ class Model_trainer:
                 "SVM": SVC()
             }
 
-            model_report = self.evaluate_models(X_train,y_train)
+            model_report = self.evaluate_models(X_train,y_train, X_test, y_test, models)
 
             best_model_name = max(
                 model_report, key = lambda x: model_report[x]['f1_score']

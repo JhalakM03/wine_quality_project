@@ -18,7 +18,7 @@ class PredictionPipeline:
 
             data_scaled = preprocessor.transform(features)
 
-            predictions = preprocessor.predict(data_scaled)
+            predictions = model.preprocessor.predict(data_scaled)
 
             return predictions
         
@@ -59,13 +59,13 @@ class CustomData:
         try:
 
             custom_data_input_dict = {
-                "fixed acidity": [self.fixed_acidity],
-                "volatile acidity": [self.volatile_acidity],
-                "citric acid": [self.citric_acid],
-                "residual sugar": [self.residual_sugar],
+                "fixed_acidity": [self.fixed_acidity],
+                "volatile_acidity": [self.volatile_acidity],
+                "citric_acid": [self.citric_acid],
+                "residual_sugar": [self.residual_sugar],
                 "chlorides": [self.chlorides],
-                "free sulfur dioxide": [self.free_sulfur_dioxide],
-                "total sulfur dioxide": [self.total_sulfur_dioxide],
+                "free_sulfur_dioxide": [self.free_sulfur_dioxide],
+                "total_sulfur_dioxide": [self.total_sulfur_dioxide],
                 "density": [self.density],
                 "pH": [self.pH],
                 "sulphates": [self.sulphates],

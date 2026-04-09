@@ -20,7 +20,7 @@ def predict_form():
     try:
         data = request.form
 
-        df = pd.DataFrame([data])
+        df = pd.DataFrame([data.to_dict()])
 
         df.columns = df.columns.str.replace("_"," ")
         df = df.astype(float)

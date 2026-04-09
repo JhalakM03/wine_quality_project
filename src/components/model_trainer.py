@@ -8,7 +8,7 @@ from sklearn.svm import SVC
 
 from src.logger import logger
 from src.exception import CustomException
-from src.utils import save_object
+from utils import save_object
 from src.config import ModelTrainerConfig
 
 from sklearn.metrics import accuracy_score,f1_score

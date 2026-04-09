@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from src.logger import logger
-from src.utils import save_object
+from utils import save_object
 from src.exception import CustomException
 from src.config import DataTransformationConfig
 

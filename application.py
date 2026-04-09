@@ -2,7 +2,8 @@ from flask import Flask, request, render_template
 import pandas as pd
 
 from src.pipelines.prediction_pipeline import PredictionPipeline
-
+import sys
+print("Python running from:", sys.executable)
 app = Flask(__name__)
 
 @app.route("/")

@@ -14,6 +14,7 @@ class PredictionPipeline:
         try:
             model = load_object(self.model_path)
             preprocessor = load_object(self.preprocessor_path)
+            print("Preprocessor:", preprocessor)
 
             data_scaled = preprocessor.transform(features)
 

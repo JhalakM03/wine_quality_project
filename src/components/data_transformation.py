@@ -20,9 +20,9 @@ class DataTransformation:
             train_df = pd.read_csv(train_path)
             test_df = pd.read_csv(test_path)
 
-            if "ID" in train_df.columns:
-                train_df.drop("ID", axis=1, inplace=True)
-                test_df.drop("ID", axis=1, inplace=True)
+            if "Id" in train_df.columns:
+                train_df.drop("Id", axis=1, inplace=True)
+                test_df.drop("Id", axis=1, inplace=True)
 
             train_df['quality_label']=train_df['quality'].apply(lambda x: 1 if x>=6 else 0)
             test_df['quality_label']=test_df['quality'].apply(lambda x: 1 if x>=6 else 0)

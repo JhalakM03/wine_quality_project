@@ -21,7 +21,7 @@ class PredictionPipeline:
             
             data_scaled = preprocessor.transform(features)
 
-            predictions = model.spredict(data_scaled)
+            predictions = model.predict(data_scaled)
 
             return predictions
         

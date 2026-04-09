@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prediction Form</title>
+        <style>
+            body{
+                font-family: Arial;
+                margin: 40px;
+            }
+            input{
+                margin: 5px;
+                padding: 8px;
+                width: 200px;
+            }
+            button{
+                padding: 10px;
+                background-color:green;
+                color: white;
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Enter Wine Details</h2>
+        <form action="/predict_form" method="post">
+            <input type="text" name="fixed_acidity" placeholder="Fixed Acidity"><br>
+            <input type="text" name="volatile_acidity" placeholder="Volatile Acidity"><br>
+            <input type="text" name="citric_acid" placeholder="Citric Acid"><br>
+            <input type="text" name="residual_sugar" placeholder="Residual Sugar"><br>
+            <input type="text" name="chlorides" placeholder="Chlorides"><br>
+            <input type="text" name="free_sulfur_dioxide" placeholder="Free Sulfur Dioxide"><br>
+            <input type="text" name="total_sulfur_dioxide" placeholder="Total Sulfur Dioxide"><br>
+            <input type="text" name="density" placeholder="Density"><br>
+            <input type="text" name="pH" placeholder="pH"><br>
+            <input type="text" name="sulphates" placeholder="Sulphates"><br>
+            <input type="text" name="alcohol" placeholder="Alcohol"><br>
+
+            <button type="submit">Predict</button>
+        </form>
+        {% if result %}
+            <h3>Prediction: {{result}}</h3>
+        {% endif %}
+    </body>
+</html>

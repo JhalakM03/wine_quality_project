@@ -21,7 +21,7 @@ def predict_form():
 
         df = pd.DataFrame([data])
 
-        df.columns = df.colums.str.replace("_"," ")
+        df.columns = df.columns.str.replace("_"," ")
         df = df.astype(float)
 
         pipeline = PredictionPipeline()

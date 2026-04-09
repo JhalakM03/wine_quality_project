@@ -16,9 +16,12 @@ class PredictionPipeline:
             preprocessor = load_object(self.preprocessor_path)
             print("Preprocessor:", preprocessor)
 
+            print("Input columns:", features.columns.tolist())
+            print("Preprocessor expects:", preprocessor.feature_names_in_)
+            
             data_scaled = preprocessor.transform(features)
 
-            predictions = model.preprocessor.predict(data_scaled)
+            predictions = model.spredict(data_scaled)
 
             return predictions
         
@@ -74,3 +77,4 @@ class CustomData:
             return pd.DataFrame(custom_data_input_dict)
         except Exception as e:
             raise CustomException(e,sys)
+        

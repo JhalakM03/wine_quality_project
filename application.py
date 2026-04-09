@@ -9,7 +9,7 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route("/predict_form", method = ["GET", "POST"])
+@app.route("/predict_form", methods = ["GET", "POST"])
 
 def predict_form():
 
